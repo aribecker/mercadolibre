@@ -1,0 +1,61 @@
+* {
+	font-family: arial;
+	font-size: 14px;
+}
+.results-table {
+	background-color: rgb(221, 221, 221); /* borders */
+}
+
+.results-table table { 
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+.results-table td, .results-table th{ 
+	background-color: white;
+}
+
+.results-table tbody {
+    vertical-align: top;
+}
+
+.results-table th, .results-table td {
+    padding: 10;
+    text-align: left;
+}
+
+.results-table td.price {
+	font-weight: bold;
+}
+
+.results-table tbody tr:first-of-type td {
+    background: rgb(165, 241, 134);
+}
+
+.results-table tbody tr:last-of-type td {
+    background: rgb(236, 131, 131);
+}
+
+.results-table tbody td {
+	height: 108px;
+}
+
+.results-table td.title {
+	width: 246px;
+}
+
+.results-table td.thumbnail {
+	width: 90px;
+}
+
+.results-table td.nickname {
+	width: 119px;
+}
+
+.results-table td.price {
+	width: 80px;
+}
+
+#error {
+	color: red;
+}
