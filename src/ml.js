@@ -1,3 +1,7 @@
+// https://carlosazaustre.es/blog/browserify-desarrollando-tu-frontend-como-en-node-js/
+var $ = require('jquery');
+console.log('$=', $);
+
 /*
 11) Using the following API endpoint: https://api.mercadolibre.com/sites/MLA/search/
 Create a search input that allows searching for any given product and shows a list of 10 items ordered by price from lowest to highest. 
@@ -77,6 +81,8 @@ function formatPrice(price) {
 	var decimal = (Math.trunc ( (price - integer) * 100) + '00' ).substring(0,2);
 	return sinteger.join('') + ',' + decimal;
 }
+
+window.formatPrice = formatPrice; // Workaround for browserify
 
 /**
  * @function showResults
