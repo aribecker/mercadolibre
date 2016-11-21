@@ -1,4 +1,12 @@
 // https://carlosazaustre.es/blog/browserify-desarrollando-tu-frontend-como-en-node-js/
+// http://www.thegeekstuff.com/2015/10/install-nodejs-npm-linux
+// cd /usr/local
+// tar --strip-components 1 -xzf /usr/save/node-v4.2.1-linux-x64.tar.gz
+// https://nodejs.org/dist/v6.9.1/
+// node-v6.9.1-linux-x86.tar.xz
+// node-v6.9.1-linux-x86.tar.gz
+
+
 var $ = require('jquery');
 console.log('$=', $);
 
