@@ -11,13 +11,26 @@
   },
   "devDependencies": {
     "browserify": "^13.1.1",
+    "catw": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-uglify": "^2.0.0",
+    "less": "^2.7.1",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
   },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
+  },
+	"scripts": {
+		"dont-watch-css": "catw -c 'lessc -' 'style/*.less' -o static/bundle.css -v",
+		"dont-watch-js": "watchify browser/*.js -o static/bundle.js -dv",
+		"dont-watch": "npm run watch-css & npm run watch-js",
+		"dont-build-css": "catw -c 'lessc -' 'style/*.less' > static/bundle.css",
+		"dont-build-js": "browserify browser/*.js > static/bundle.js",
+		"dont-build": "npm run build-css && npm run build-js",
+		"build": "browserify src/ml.js -o dist/ml.js -d",
+		"watch": "watchify src/ml.js -o dist/ml.js -v"
   }
 }
